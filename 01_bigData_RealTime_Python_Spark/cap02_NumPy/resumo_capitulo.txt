@@ -1,0 +1,6 @@
+Ementa NumPy:
+- notebook 01:
+	Tipos de dados NumPy, estruturação e operações simples entre arrays
+	
+- notebook 02:
+	
