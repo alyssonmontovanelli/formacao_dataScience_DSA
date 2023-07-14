@@ -17,4 +17,17 @@ Ementa NumPy:
 	Label Encondig (converter a string para sua variável numérica ou valor correspondente, como fiz no projeto do ENEM)
 	Binarização com utilização do np.isin e np.where
 	Limpeza de String com chararray.strip
+	Correlação de colunas que tenham dados equivalentes, delete e recolocação de colunas
 	
+	LINHAS 74 ATÉ 135 de "pre_processamento.py" ----- Incrível! 
+		Utilização de np.delete / loop em np.unique / criação de chaves e valores para dicionário com ZIP / np.where / criação de lista com conversão de nd.array
+	
+	Linhas 156 até 168 
+		utilização de argsort para rearranjar duas variáveis
+		states_name, states_count = np.unique(dados_string[:,5], return_counts=True)
+		print(states_name, states_count)
+
+		# Ordenar de forma decrescente com o numero de ocorrências
+		state_counts_sorted = np.argsort(-states_count)
+		
+		print(states_name[state_counts_sorted], states_count[state_counts_sorted])
