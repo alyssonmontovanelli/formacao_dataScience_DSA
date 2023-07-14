@@ -15,5 +15,6 @@ Ementa NumPy:
 	Trabalho com variável categórica (Transformar os dados String e tipo texto, seguindo alguma lógica)
 	Outra forma de utilização do np.where
 	Label Encondig (converter a string para sua variável numérica ou valor correspondente, como fiz no projeto do ENEM)
-	
+	Binarização com utilização do np.isin e np.where
+	Limpeza de String com chararray.strip
 	

@@ -101,13 +101,13 @@ print(header_string)
 Pré processamento da variável issue_date com Label Encondig
 """
 #Extrai valores unicos da variável
-print(np.unique(dados_string[:,0]))
+# print(np.unique(dados_string[:,0]))
 
 # Remover o sufixo '-15' e converter em um array de strings
 dados_string[:,0] = np.chararray.strip(dados_string[:,0], "-15")
 
 # Novamente extrai os valores unicos após o strip
-print(np.unique(dados_string[:,0]))
+# print(np.unique(dados_string[:,0]))
 
 # Criando um Array para os meses (incluindo o que está em branco)
 meses = np.array(['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
@@ -118,7 +118,51 @@ for i in range(13):
     dados_string[:,0] = np.where(dados_string[:,0] == meses[i], i, dados_string[:,0])
 
 #Verificando novamente
-print(np.unique(dados_string[:,0]))
+# print(np.unique(dados_string[:,0]))
+
+
+"""
+Pré processamento da variável loan_status com Binarização
+# """
+# print(np.unique(dados_string[:,1]))
+# print(np.unique(dados_string[:,1]).size)
+
+# Criando array com apenas 3 status
+status_bad = np.array(['', 'Charged Off', 'Default', 'Late (31-120 days)'])
+
+# Checando se os valores da coluna estão no array anterior
+dados_string[:,1] = np.where(np.isin(dados_string[:,1], status_bad),0,1)
+
+# print(np.unique(dados_string[:,1]))
+
+
+"""
+Pré processamento da variável term com Limpeza de String
+"""
+#exibir os valores unicos da coluna term
+print(np.unique(dados_string[:,2]))
+
+# Strip em "months"
+dados_string[:,2] = np.chararray.strip(dados_string[:,2], " months")
+print(np.unique(dados_string[:,2]))
+
+# Alterando o valor do titulo da coluna
+header_string[2] = "term_months"
+
+# Substituir os valores ausentes pelo maior termo encontrado, no caso, 60
+
+dados_string[:,2] = np.where(dados_string[:,2] == '', '60', dados_string[:,2])
+print(np.unique(dados_string[:,2]))
+
+# Mudar tipo do valor, de string para int - '30' para 30
+
+
+"""
+Pré processamento da variável grade e sub_grade com Dicionário (tipo Label Encondig)
+"""
+
+
+
 
 
 
