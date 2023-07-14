@@ -3,4 +3,17 @@ Ementa NumPy:
 	Tipos de dados NumPy, estruturação e operações simples entre arrays
 	
 - notebook 02:
+	Slicing (corte) de Arrays simples e multidimensionais
+	
+-notebook 03:
+	Transformar matriz em vetor /  operador lógico / np.where / ordenaçãoi array e reshaping
+	
+- Estudo de caso:
+	Importação de arquivo CSV com NumPy
+	Trabalho com arquivo que contenha valores do tipo string e int (Tratamento e separação)
+	Ideia de CheckPoint
+	Trabalho com variável categórica (Transformar os dados String e tipo texto, seguindo alguma lógica)
+	Outra forma de utilização do np.where
+	Label Encondig (converter a string para sua variável numérica ou valor correspondente, como fiz no projeto do ENEM)
+	
 	
