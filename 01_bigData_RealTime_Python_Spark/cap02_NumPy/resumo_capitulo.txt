@@ -8,6 +8,7 @@ Ementa NumPy:
 -notebook 03:
 	Transformar matriz em vetor /  operador lógico / np.where / ordenaçãoi array e reshaping
 	
+	
 - Estudo de caso:
 	Importação de arquivo CSV com NumPy
 	Trabalho com arquivo que contenha valores do tipo string e int (Tratamento e separação)
@@ -30,4 +31,15 @@ Ementa NumPy:
 		# Ordenar de forma decrescente com o numero de ocorrências
 		state_counts_sorted = np.argsort(-states_count)
 		
-		print(states_name[state_counts_sorted], states_count[state_counts_sorted])
+
+	Pré Processamento de dados numéricos:
+		- Criação de array estatístico, para aplicação em todas as colunas, visando substituir os valores coringas
+		
+	arquivo "integrando_datasets"
+		- Inclusão de segundo dataset, com as taxas cambiais de cada mês (DOLAR PARA EURO):
+		- reshape / hstack (concatenar arrays) / 
+		
+	main():
+		- Concatenação de dados e dos headers
+		- savetxt - salvar as informações em novo arquivo CSV / Limpo e processado
+		

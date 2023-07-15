@@ -155,20 +155,20 @@ header_string = np.delete(header_string, 5 )
 """
 Pré processamento da variável addr_state / SEPARANDO POR ESTADO - CATEGORIZAÇÃO
 """
-print(np.unique(dados_string[:,5]))
+# print(np.unique(dados_string[:,5]))
 
 # Renomear a variavel
 header_string[5] = "state_address"
 
 #Expressão abaixo retorna dois dados, o nome da variavel e a ocorrência dela
 states_name, states_count = np.unique(dados_string[:,5], return_counts=True)
-print(states_name, states_count)
+# print(states_name, states_count)
 
 # Ordenar de forma decrescente com o numero de ocorrências
 state_counts_sorted = np.argsort(-states_count)
 
 # Resultado 
-print(states_name[state_counts_sorted], states_count[state_counts_sorted])
+# print(states_name[state_counts_sorted], states_count[state_counts_sorted])
 
 # Substituir valores ausentes por 0
 dados_string[:,5] = np.where(dados_string[:,5] == '', 0, dados_string[:,5])
@@ -185,7 +185,7 @@ dados_string[:,5] = np.where(np.isin(dados_string[:,5], states_south), 2, dados_
 dados_string[:,5] = np.where(np.isin(dados_string[:,5], states_midwest), 3, dados_string[:,5])
 dados_string[:,5] = np.where(np.isin(dados_string[:,5], states_east), 4, dados_string[:,5])
 
-print(np.unique(dados_string[:,5]))
+# print(np.unique(dados_string[:,5]))
 
 
 """ CONVERTENDO DADOS_STRING"""
@@ -194,7 +194,8 @@ print(dados_string)
 
 #convertendo para ter apenas valores do tipo int
 dados_string = dados_string.astype(int)
-print(dados_string.dtype)
+dados_string_int = dados_string.copy()
+# print(dados_string.dtype)
 
 '''CHECKPONIT 2'''
 checkpoint_strings = checkpoint("dados/Checkpoint-String", header_string, dados_string)
