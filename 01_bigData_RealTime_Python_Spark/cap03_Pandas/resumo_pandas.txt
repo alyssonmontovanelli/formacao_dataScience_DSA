@@ -1,0 +1,24 @@
+Ementa Pandas:
+- Notebook 01:
+	Métodos e atributos gerais de DF
+	
+- Notebook 02:
+	Manipulação de colunas / Refatoração (utilizar variável Py para armazenar dados da pesquisa)
+
+- Notebook 03:
+	Adição de novas colunas e atribuição de valores
+	posicionamento de novas colunas no dataframe df.insert())
+	isert com Broadcasting
+	rename de colunas
+	
+- Notebook 04:
+	Aletaração de ordem das colunas / Fatiamento de Series / Operações com Dicionários
+	Exercício de recall slicing / Utilização de ".loc"
+	remover coluna com "del"
+	
+- Notebook 05:
+	Operações com Series
+	maiores e menores valores da serie / Comparações 
+	
+	
+	
