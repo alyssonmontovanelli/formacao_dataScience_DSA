@@ -20,5 +20,17 @@ Ementa Pandas:
 	Operações com Series
 	maiores e menores valores da serie / Comparações 
 	
+- Desafios (Pasta separada):
+	Junção de dois datasets por coluna em comum (Nome_Escola)
+	Tipos de filtros do data frame
+	Consultas com condicionais
+	Formatação de números grandes com map e REGEX (ex: 39160 => 39,160)	
+	Groupby e slicing de forma intensa
+	Exportação para Excel
+	
+	
+	
+
+	
 	
 	
