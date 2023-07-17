@@ -37,6 +37,8 @@ print(f"02 - Total de alunos: {total_deAlunos}\n")
 orcamento_total = dados_escolas['Orcamento_Anual'].sum()
 print(f"03 - Orçamento total das escolas é de $ {orcamento_total}\n")
 
+orcamento_porEscola = dados_escolas.groupby('Nome_Escola')['Orcamento_Anual'].sum()
+
 
 
 '''04 - Qual a média da nota dos alunos em Redação?'''
@@ -128,9 +130,9 @@ print("\n\t Maiores dificuldades \n\n")
 '''
 
 print(dados_estudantes.columns)
-aprov_red_sexo = dados_estudantes[dados_estudantes['Nota_Redacao'] >= 70]\
-                 .groupby('Genero')['Nome_Estudante'].count()
-
+aprov_red_sexo = dados_full[dados_full['Nota_Redacao'] >= 70]\
+                 ['Genero'].value_counts()
+print(aprov_red_sexo)
 # print(aprov_red_sexo)
 print(f"11 - Gênero com maior aprovação foi o Feminino, com {aprov_red_sexo[0]} alunas aprovadas.\n")
 
@@ -151,8 +153,8 @@ print(f"12 - Gênero com maior aprovação foi em Matemática foi o Feminino, co
 '''
 13 - Quais os tipos de todas as escolas em nossa base de dados?
 '''
-tipos_escola = pd.unique(dados_escolas['Tipo_Escola'])
-print(f"13 - Os tipos de escola são {tipos_escola[0]} e {tipos_escola[1]}\n")
+tipos_escola = dados_escolas.set_index(["Nome_Escola"])["Tipo_Escola"].sort_values()
+print(f"13 - Os tipos de escola são {tipos_escola}\n")
 
 
 
@@ -166,8 +168,7 @@ print(f"13 - Os tipos de escola são {tipos_escola[0]} e {tipos_escola[1]}\n")
 # print(total_deAlunos_porEscola)
 
 # 2ª forma abaixo:
-total_deAlunos_porEscola = dados_estudantes.groupby('Nome_Escola')['ID_Estudante'].count().reset_index()\
-                          .rename(columns={'ID_Estudante': 'Total'})
+total_deAlunos_porEscola = dados_estudantes.groupby('Nome_Escola')['ID_Estudante'].count()
 print(f"14 - Quantidade de alunos por escola:\
       \n{total_deAlunos_porEscola}\
       \n")
@@ -180,7 +181,7 @@ print(f"14 - Quantidade de alunos por escola:\
 # Vou criar uma coluna com no DF "dados-escola", com a divisão do orçamento pela quantidade de alunos
 dados_escolas['Orc_Per_Capta'] = dados_escolas['Orcamento_Anual'] / dados_escolas['Numero_Alunos']
 
-filtro_renda_perCapta = dados_escolas[['Nome_Escola', 'Orc_Per_Capta']]
+filtro_renda_perCapta = dados_escolas.set_index(["Nome_Escola"])["Orc_Per_Capta"].sort_values()
 
 print(f"15 - Renda per capta por escola:\
       \n{filtro_renda_perCapta}\
@@ -197,24 +198,41 @@ print(f"16 - Média de notas das redações por escola:\
       \n{mediaRedacao_porEscola}\
       \n")
 
+# % de Aprovados por escola em Redação
+aprovados_red = dados_full[(dados_full['Nota_Redacao'] >= 70)]
+
+aprovados_red_PCT_escola = (aprovados_red.groupby(["Nome_Escola"]).count()['Nome_Estudante']\
+                            / total_deAlunos_porEscola * 100).round(2)
+print(aprovados_red_PCT_escola)
+
 
 '''
 17- Qual a nota média dos alunos em Matemática para cada escola?
 '''
-mediaMatematica_porEscola = dados_estudantes.groupby('Nome_Escola')['Nota_Matematica'].mean().reset_index().round(2)
+mediaMatematica_porEscola = dados_estudantes.groupby('Nome_Escola')['Nota_Matematica'].mean().round(2)
 print(f"17 - Média de notas de Matemática por escola:\
       \n{mediaMatematica_porEscola}\
       \n")
+
+# % de Aprovados por escola em Redação
+aprovados_Mat = dados_full[(dados_full['Nota_Matematica'] >= 70)]
+
+aprovados_MAT_PCT_escola = (aprovados_Mat.groupby(["Nome_Escola"]).count()['Nome_Estudante']\
+                            / total_deAlunos_porEscola * 100).round(2)
+print(aprovados_MAT_PCT_escola)
 
 
 '''
 18- Considerando somente os alunos aprovados em Redação, qual a média de alunos aprovados por escola?
 '''
 media_aprovadosRedacao_escola = dados_estudantes[dados_estudantes['Nota_Redacao'] >= 70]\
-                                .groupby('Nome_Escola')['Nota_Redacao'].mean().reset_index().round(2)
+                                .groupby('Nome_Escola')['Nota_Redacao'].mean().round(2)
 print(f"18 - Média de notas das redações dos aprovados, por escola:\
       \n{media_aprovadosRedacao_escola}\
       \n")
+
+# % de aprovados em redacação
+
 
 
 '''
@@ -234,7 +252,40 @@ aprovados_geral_porEscola = dados_estudantes[dados_estudantes['Aprov_red_mat'] =
                           .groupby('Nome_Escola')[['Nota_Matematica', 'Nota_Redacao']]\
                           .mean().reset_index().round(2)
 print(f"20 - Média de notas de Matemática/Redação dos aprovados, por escola:\
-      \n{media_aprovadosMatematica_escola}\
+      \n{aprovados_geral_porEscola}\
       \n")
 
-dados_estudantes.to_excel('df_resumo_estudante.xlsx')
+
+'''
+21 - % De alunos aprovados em MAT e RED por Escolas 
+'''
+aprovados_geral = dados_full[(dados_full['Nota_Redacao'] >= 70) & (dados_full['Nota_Matematica'] >= 70)]
+aprovados_geral_PCT_escola = (aprovados_geral.groupby(["Nome_Escola"]).count()['Nome_Estudante']\
+                            / total_deAlunos_porEscola * 100).round(2)
+print(aprovados_geral_PCT_escola)
+
+
+
+'''
+
+Criando novo DataFrame com resumo de todos os dados obtido até então, para posterios salvamento em formato xls
+
+'''
+
+dataFrame_final_performanceEscolar = pd.DataFrame({
+    "Tipo Escola": tipos_escola,
+    "Total Estudantes": total_deAlunos_porEscola,
+    "Total Orçamento": orcamento_porEscola,
+    "Orç Por Estudante": filtro_renda_perCapta,
+    "Nota Média Aprov MAT": mediaMatematica_porEscola,
+    "% Aprovados MAT": aprovados_MAT_PCT_escola,
+    "Nota Média Aprov RED": media_aprovadosRedacao_escola,
+    "% Aprovados RED": aprovados_red_PCT_escola,
+    "% Aprovados GERAL": aprovados_geral_PCT_escola
+
+})
+print(dataFrame_final_performanceEscolar)
+
+
+""" CRIAÇÃO DE PLANILHA COM OS DADOS DE PERFORMANCE ESCOLAR """
+dataFrame_final_performanceEscolar.to_excel('Relatório_Final_Performance_Escolar.xlsx')

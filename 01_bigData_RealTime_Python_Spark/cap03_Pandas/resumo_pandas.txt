@@ -26,8 +26,12 @@ Ementa Pandas:
 	Consultas com condicionais
 	Formatação de números grandes com map e REGEX (ex: 39160 => 39,160)	
 	Groupby e slicing de forma intensa
-	Exportação para Excel
+	Utilização de set_index para realizar filtros (tipo escola - quest 13)
 	
+	Criação de dataframe resumido através de dicionário Py - Exportar relatório para excel
+		- Importante deixar todos os conjuntos de dados com o mesmo index, através do reset index
+		- metodo "reset_index()" é bom apenas para visualizar um df ou gerar gráfico, porém para criar dict com resumo, não posso utilizar
+		
 	
 	
 
