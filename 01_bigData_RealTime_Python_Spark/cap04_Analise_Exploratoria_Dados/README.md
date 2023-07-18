@@ -50,3 +50,8 @@
  <li>Atrasos na entrega por prioridade de entrega</li>
  ➜ Agrupamento de datasets para melhor verificar os atrasos por modal, com base no percentual de atraso.
 </ul>
+
+
+<h3>Exercícios</h3>
+➜ Uso do metodo "strftime" do pandas para formatar a coluna no formato de data / Utilização de ".map" para aplicar função utilizando strftime em cada linha<br>
+➜ ....groupby('dia_Semana').sum().plot(kind = 'bar') - Para plotar de forma rápida<br>

@@ -1,4 +1,0 @@
-Ementa Módulo de Análise Exploratóra de Dados
-
-	Data Wrangling: Processo de limpeza e unificação de dados Brutos
-	
