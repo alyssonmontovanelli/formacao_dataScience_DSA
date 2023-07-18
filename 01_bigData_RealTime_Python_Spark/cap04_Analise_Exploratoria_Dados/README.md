@@ -48,7 +48,6 @@
  <li>Atrasos na entrega por modal de envio</li>
  ➜ Agrupamento de datasets para melhor verificar os atrasos por modal, com base no percentual de atraso.
  <li>Atrasos na entrega por prioridade de entrega</li>
- ➜ Agrupamento de datasets para melhor verificar os atrasos por modal, com base no percentual de atraso.
 </ul>
 
 
