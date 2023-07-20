@@ -11,7 +11,6 @@
 <h2>Descrição do Capítulo</h2>
 <p>Continuação do cap anterior. Estudo de Caso 04</p>
 <p>Processo de usar o conhecimento da área de negócio, para remover, selecionar e transformar os dados, mantendo os atributos relevantes e criar outros</p>
-de dados "na" / duplicados
 
 <h2>Resumo do Capítulo / Estudo de Caso 04 </h2>
 <ul>
@@ -30,5 +29,11 @@ de dados "na" / duplicados
       <li><b>Feature Selection</b></li>
       ➜ Seleção das Variáveis que serão realmente úteis / Utilizar corr() para numéricas e barras para categóricas
       <li><b>Feature Extration</b></li>
-      ➜ 
+      ➜ Redução de dimensionalidade e/ou criação de novas<br>
+      ➜ Criação de nova variável a ser preenchida por valo NA(np.na) para após preencher com dados, utilizando np.where<br>
+      ➜ Utilização de <b>NP.WHERE</b> aninhado<br>
+      ➜ Método 'pivot' - linha em coluna e coluna em linha
+      ➜ Método "replace(np.nan, 0)" para substituir valor ausente pro 0 direto na variável
+
+
       
