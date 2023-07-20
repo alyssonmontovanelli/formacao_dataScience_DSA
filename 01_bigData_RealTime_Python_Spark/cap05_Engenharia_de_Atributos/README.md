@@ -34,6 +34,10 @@
       ➜ Utilização de <b>NP.WHERE</b> aninhado<br>
       ➜ Método 'pivot' - linha em coluna e coluna em linha
       ➜ Método "replace(np.nan, 0)" para substituir valor ausente pro 0 direto na variável
+    </ul><br>
+  <li>Exercício</li>
+    
+
 
 
       
