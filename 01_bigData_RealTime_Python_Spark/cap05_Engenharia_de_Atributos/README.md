@@ -36,7 +36,10 @@
       ➜ Método "replace(np.nan, 0)" para substituir valor ausente pro 0 direto na variável
     </ul><br>
   <li>Exercício</li>
-    
+    <ul>
+      <li>Concatenação do DF com Concat</li>
+    </ul><br>
+
 
 
 
