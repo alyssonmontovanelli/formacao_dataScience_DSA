@@ -50,8 +50,27 @@
       ➜ Diz que a média amostral (MÉDIAS AMOSTRAIS, NÃO AMOSTRA DE DADOS) tem uma Distribuição Normal, independente da aparência da distribuição dos dados originais<br>
     </ul><br>
   <li><b>Estatística Inferencial</b></li>
-  ➜ Aplicação de tecnicas de <b>amostragem</b> em uma determinada popualçao, para então chegar a uma <b>Amostra</b> menor dos dados, porém fidedigna e representativa, para então realizar INFERÊNCIAS ESTATÍSTICAS sobre a população <br>
- 
+  ➜ Aplicação de tecnicas de <b>amostragem</b> em uma determinada popualçao, para então chegar a uma <b>Amostra</b> menor dos dados, porém fidedigna e representativa, para então realizar INFERÊNCIAS ESTATÍSTICAS sobre a população <br><br>
+  ➜ <b>Tipos de Amostragem</b>:
+  <ul>
+      <li><b>Métodos Não Aleatórios</b></li>
+      <li><b>Métodos Aleatórios</b></li>
+      ➜ <u>Amostragem Aleatória Simples</u>: Qualquer elemento da população serve para como amostra, sem pré-requisitos<br>
+      ➜ <u>Amostragem Sistemática</u>: Elementos da população ordenados e retirados periódicamente (Ex: linha de produção)<br>
+      ➜ <u>Amostragem Estratificada</u>: Seleção de amostras de populações heterogêneas, para divisão em sub-populações contendo elementos heterogêneos. Divisões prévias na população<br>
+      ➜ <u>Amostragem por Aglomerados</u>: Por grupos<br>
+  </ul><br>
+  ➜ <b>Testes de Hipóteses</b>:
+  <ul>
+      <li><b>Hipótese Nula (H0)</b></li>
+        ➜ As médias iniciais
+      <li><b>Hipótese Alternativa (H1 ou Ha)</b></li>
+        ➜ As médias quando quero levantar uma hipóteses de valores maiores/menores aos iniciais
+      <li><b>Teste de Hipótese Unilateral</b></li>
+      ➜ Simbolizada quando eu quero uma hipótese que seja > ou < do que a hipótese nula
+      <li><b>Teste de Hipótese Bilateral</b></li>
+      ➜ Simbolizada quando eu quero uma hipótese que seja =/= da hipótese nula
+  </ul><br>
 
 
 
