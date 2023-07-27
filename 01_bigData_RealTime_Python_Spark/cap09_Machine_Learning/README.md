@@ -1,4 +1,4 @@
-<h1 align="center"> Capítulo 06 - Pré Processamento dos Dados</h1>
+<h1 align="center"> Capítulo 09 - Machine Learning</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
@@ -11,33 +11,40 @@
 <p>Utilização do pacote <b>"preprocessing" do Scikitlearn</b>. Estudo de Caso 05</p>
 <p>Modificar os dados para aplicar técnicas de modelagem preditiva (machine learning) ou estatística</p>
 
-<h2>Resumo do Capítulo / Técnicas de Pré Processamento </h2>
+<h2>Resumo do Capítulo</h2>
 <ul>
- <li><b>Label Encoding</b> - Variável categória</li>
-  <ul>
-      <li>Método de aplicação manual / Py puro</li>
-      ➜ Variável categórica ordinal: Quando existe hierarquia entre os dados<br>
-      ➜ Variável categórica Nominal: Quando não existe hierarquia, ex: Sexo do cliente<br>
-      ➜ Método map para trocar os valores da variável
-    </ul><br>
-  <li><b>Label Encoder() - Sckit Learn</b></li>
-    <ul>
-      <li>Aplicação - Modo Automático</li>
-      ➜ Criar o objeto do tipo "LabelEncoder" e treinar na variável (dados de treino)<br>
-      ➜ Aplicar o objeto encoder  e method transform para transformar os riável
-    </ul><br>
-  <li><b>One-Hot Encoding - Sckit Learn</b></li>
-  odificação one-hot é uma ferramenta bastante poderosa, mas só é aplicável para dados categóricos que possuem um número baixo de valores exclusivos.
-    <ul>
-      <li><b>Aplicação em variáveis que não possuem hierarquia</b></li>
-      ➜ Exemplo: Cores, tipos de armazem<br>
-      ➜ get_dummies<br>
-    </ul><br>
-  <li><b>Feature Scaling</b> - Dimensionamento das variáveis</li>
-  ➜ <b>Normalização</b> -> reescalonamento dos recursos para um intervalo de [0,1], o <u>método MinMaxScaler() do sklearn.preprocessing</u> oferece esse procedimento<br>
-  ➜ <b>Padronização</b> -> Centralizar as colunas de recursos na média 0, com desvio padrão de 1 para as colunas. Mantém informações úteis sobre valores discrepantes. O <u>método StandardScaler()do pacote sklearn.preprocessing</u> oferece o procedimento<br>
+ <li><b>Três Principais algorítmos de Machine Learning</b></li>
+ ➜ Aprendizagem Supervisionada<br>
+ ➜ Aprendizagem não supervisionada <br>
+ ➜ Aprendizagem por reforço<br>
 
-  <li>Que capítulo incrível! 
+  <li><b>Aprendizagem Supervisionada</b></li>
+    <ul>
+      <li>Dados de treino ➜ Algorítmo de ML ➜ Modelo Preditivo para receebr novos dados de entrada e apresentar as previsões com saída dos dados</li>
+      <li>Principais Algorítmos:</li>
+      ➜ Regressão: Previsão de valor numérico<br>
+      ➜ Classificação: Previsão de classe categórica<br>
+    </ul>
+  <li><b>Aprendizagem NÃO Supervisionada</b></li>
+    <ul>
+      <li>Dados de treino ➜ Algorítmo de ML ➜ Receebr novos dados de entrada e encontrar padrões e realziar a clusterização com base em dados históricos, sem indicar a saída dos dados
+    </ul>
+  <li><b>Aprendizagem Por Reforço</b></li>
+    <ul>
+      <li>Tentativa e Erro com "recompensas" a cada tarefa bem concluida</li>
+    </ul>
+  
+<h2>Mini Projeto - Aprendizado Supervisionado - CLASSIFICAÇÃO</h2>
+<ul>
+ <li><b>Carregamento de dataset</b></li>
+ <li><b>EDA e Limpeza dos Dados</b></li>
+ ➜ Verificação do tipo das variáveis / valores nulos / ausentes / Duplicados<br>
+ ➜ Label encoding em variáveis do tipo object <br>
+ ➜ Plotagem para melhor verificação / corr / hist / FacetGrid com var Target<br>
+ ➜ Limpar Outliers / Duplicados / 
+ <li><b>Carregamento de dataset</b></li>
+ <li><b>Carregamento de dataset</b></li>
+ <li><b>Carregamento de dataset</b></li>
 
 
 
