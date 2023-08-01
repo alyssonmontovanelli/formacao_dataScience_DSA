@@ -55,17 +55,17 @@
   ➜ <u>Toda e qualquer transformação aplicada em treino, deve ser aplicada em teste e nos novos dados</u>
   <br>  <br>
  <li><b>Construção do Modelo ML/ Treinamento / Avaliação</b></li>
+  ➜ Após a confecção do modelo e teste, devemos sempre mensurar as métricas para ver o desempenho final.<br>
+  ➜ Foi criado um DF que recebe as métricas de cada modelo
  <ul>
-      <li>Regressão Logística (<b>Benchmark</b>) boa opção para regressão:</li>
+      <li><b>Regressão Logística (Benchmark)</b> boa opção para regressão:</li>
       ➜ Definição de hiperparâmetros com GridSearchCV<br>
       - Criação de varios modelos de regressão, com diferentes hiperparams, para então escolher o melhor, utilizando (best_estimator)<br>
       ➜ Previsões utilizando "predict(x_teste)"<br>
       ➜ É possível tirar a probabilidade de cada ocorrência com "predict_proba(x_teste)"<br>
-      ➜ Matriz de confusão para verificar erros e acertos do modelo
-      <li>No Mini projeto, utilizamos a Padronização</li>
-      <li>Aplicada na variável de entrada, não na alvo</li> 
+      ➜ Matriz de confusão para verificar erros e acertos do modelo<br>
+    <li><b>Random Forest</b></li>
   </ul>
- <li><b>Carregamento de dataset</b></li>
 
 
 
