@@ -65,7 +65,28 @@
       ➜ É possível tirar a probabilidade de cada ocorrência com "predict_proba(x_teste)"<br>
       ➜ Matriz de confusão para verificar erros e acertos do modelo<br>
     <li><b>Random Forest</b></li>
+    ➜ Geralmente é bem mais preciso do que o anterior<br>
+    ➜ Utilizamos RandomizedSearchCV para encontrar os melhores parametros, ou as qtde de arvores de decisões<br>
+    <li><b>KNN</b> - Algorítmo dos vizinhos mais próximos</li>
+    ➜ Não utiliza probabilidade, sim distância matemática entre os pontos<br>
+    ➜ basicamente pega um novo ponto e verifica qual classe está mais próxima<br>
+    ➜ Costuma não ser tão preciso quanto os anteriores<br>
+    ➜ <b>Hiperparâmetro K</b> - Indica o número de vizinhos mais próximos que o algoritmo vai considerar para classificar<br>
+    ➜ Não possibilita verificar variaveis mais importantes<br>
+    <li><b>Decision Tree</b></li>
+    ➜ Apenas uma árvore de decisão
+    <li><b>SVM</b></li>
   </ul>
+
+   <li><b>Seleção do Melhor Modelo</b></li>
+   ➜ Acurácia para decidir entre modelos que utilizem o mesmo algorítimo<br>
+   ➜ AUC Score para decidir entre modelos com diferentes algorítmos
+
+   <li><b>Deploy</b></li>
+   ➜ Padronização dos dados de entrada com mesmos padrões de treino<br>
+   ➜ é necessário transformar sempre em array NumPy<br>
+   ➜ Fazer Reshape do nd.array antes de apresentar ao modelo
+
 
 
 
