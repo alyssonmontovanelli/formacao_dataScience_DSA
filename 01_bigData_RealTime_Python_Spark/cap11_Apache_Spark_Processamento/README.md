@@ -22,13 +22,24 @@
 <p>Dados coletados de "https://bitcoincharts.com/charts/bitstampUSD#tgSzm1g10zm2g25zv"</p>
 
 <ul>
-   <li>SparkContext  é responsável por realizar a conexão entre o cluster de computadores</li>
+   <li><b>SparkContext  é responsável por realizar a conexão entre o cluster de computadores</b></li>
    <li>Definir contexto, criar sessão com "Builder"</li>
    <li><b>RDD</b> - Resilient Distributed Datasets</li>
+   ➜ Estrutura de dados para ambiente distribuido<br>
    ➜ Coleção de objetos distribuida e imutável, que podem ser computados em diferentes nodes do cluster<br>
-   ➜ Spark armazena os resultados intermediários em memória, São gravados em disco apenas quando uma ação é gerada.
-   ➜ 2 formas de criar RDD's: Referenciado dataset externo (HDFS, NoSQL) ou paralelizando uma coleção existente (sc.parallelize)
-   ➜ RDD suporta 2 tipós de operações: Transformação e Ação
+   ➜ Spark armazena os resultados intermediários em memória, São gravados em disco apenas quando uma ação é gerada.<br>
+   ➜ 2 formas de criar RDD's: Referenciado dataset externo (HDFS, NoSQL) ou paralelizando uma coleção existente (sc.parallelize)<br>
+   ➜ RDD suporta 2 tipós de operações: Transformação e Ação<br>
+   <li><b>Data Wrangling com SparkSQL</b></li>
+   ➜ Tabela temporária fica visivel em todo cluster, apenas durante a sessão spark<br>
+   ➜ Devemos criar cópias dos dados, gravar em tabelar temporária, executa oq for necessário, após salvar em outro DF<br>
+  <li><b>Criação / Extração / modelagem de colunas</b></li>
+   ➜ Utilização de ".cast" para atribuir tipo (como o .map em py puro)<br>
+   ➜ Seleção de colunas, drop, split, DateTime para extração de info<br><br>
+  <li><b>EDA</b></li>
+  ➜ Para este momento, é melhor converter o DF Spark para DF do pandas, para utilizar as ferramentas matplotlib e seaborn
+
+
 
 
 </ul>
