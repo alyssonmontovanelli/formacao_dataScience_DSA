@@ -44,11 +44,9 @@
   ➜ <b>Vector Assembler</b> - transformador  que  combina  uma determinada lista de colunas em uma única coluna de vetor. é definida as colunas de entrada (inputCols) e a coluna de saída (outputCol)<br>
   ➜ Será gerada uma nova coluna, chamada feature, com os dados e entrada
   <li><b>Machine Learning</b></li>
-
-
-
-
-
+  ➜ Método para as previsões: <b>transform</b><br>
+  ➜ Otimização d ehiperparametros com ParamGridBuilder<br>
+  ➜ Verificação cruzada ou <b>CrossValidator</b> - Utiliza os dados de treino e divide internamente em duas amostras, treino e teste, com cada um dos hiperparametros. No final, extraimos o bestModel<br>
 </ul>
 
 
