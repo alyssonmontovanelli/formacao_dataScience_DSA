@@ -37,7 +37,14 @@
    ➜ Utilização de ".cast" para atribuir tipo (como o .map em py puro)<br>
    ➜ Seleção de colunas, drop, split, DateTime para extração de info<br><br>
   <li><b>EDA</b></li>
-  ➜ Para este momento, é melhor converter o DF Spark para DF do pandas, para utilizar as ferramentas matplotlib e seaborn
+  ➜ Para este momento, é melhor converter o DF Spark para DF do pandas, para utilizar as ferramentas matplotlib e seaborn<br>
+  ➜ Mesma teoria dos outros capitulos, verificação de multicolinearidade, outliers
+  <li><b>Engenharia de Atributos</b></li>
+  ➜ PySpark precisa que os dados estejam no formato de vetor para ML<br>
+  ➜ <b>Vector Assembler</b> - transformador  que  combina  uma determinada lista de colunas em uma única coluna de vetor. é definida as colunas de entrada (inputCols) e a coluna de saída (outputCol)<br>
+  ➜ Será gerada uma nova coluna, chamada feature, com os dados e entrada
+  <li><b>Machine Learning</b></li>
+
 
 
 
