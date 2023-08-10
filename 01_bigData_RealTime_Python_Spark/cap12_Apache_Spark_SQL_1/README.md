@@ -43,8 +43,9 @@
 ➜ Images = template do container (toda a config que quero)<br>
 ➜ execução de container 'getting-started' via cmd na porta 80:80 (servidor web)<br>
 ➜ Criação de container utilizando imagem baixada do PosgreSQL: 
-<u>docker run --name dsa -ePOSTGRES_PASSOWRD=dsa123 -p 5432:5432 -d postgres</u>
+<u>docker run --name dsa -ePOSTGRES_PASSOWRD=dsa123 -p 5432:5432 -d postgres</u><br><br>
 
+<li><b>Instalação de Pacotes para comunicação entre ferramentas</b></li>
 
 
 </ul>
