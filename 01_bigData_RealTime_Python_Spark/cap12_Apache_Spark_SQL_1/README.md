@@ -3,9 +3,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
   <img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=for-the-badge&logo=apachespark&logoColor=#E35A16">
-  <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white">  
   <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
 </p>
+
 
 <h2>Descrição do Capítulo</h2>
 <p>Utilização da livraria SQL no Apache Spark, com o padrão ANSI, além de ideias inicias de Docker</p>
@@ -46,6 +48,22 @@
 <u>docker run --name dsa -ePOSTGRES_PASSOWRD=dsa123 -p 5432:5432 -d postgres</u><br><br>
 
 <li><b>Instalação de Pacotes para comunicação entre ferramentas</b></li>
+<li><b>SGBD =/= Banco de dados</b></li>
+➜ SGBD é o software que armazena bancos de dados
+<li><b>SQLAlchemy</b></li>
+➜ Devemos criar o o rotor de conexão com 'create_engine'
+➜ Criação de tabela SQL com apenas 1 linha de código
+➜ Execução de querys utilizando a engine
+<li><b>pgAdmin</b></li>
+➜ Software para administrar e trabalhar de forma mais otimizada com o banco de dados
+➜
+<li><b>SQLDF</b></li>
+➜ Forma de utilizar a sintaxe SQL em dataframe do Pandas
+<li><b>Carregar dados SQL para Spark</b></li>
+➜ Transformar em df pandas, depois transformar df pandas em df Spark
+
+
+
 
 
 </ul>
