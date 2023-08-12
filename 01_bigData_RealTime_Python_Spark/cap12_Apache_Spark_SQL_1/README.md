@@ -64,7 +64,9 @@
 <li><b>Manipulação de dados de DF SPark</b></li>
 ➜ Sintaxe parecida com a do pandas / SQL
 ➜ Utilizado: Filtros / agg / groupBy
-<li><b>UDF - User Defined Function</b></li>
+<li><b>UDF - User Defined Function
+</b></li>
+➜ Funções criadas para "extender" a funcionalidade do framework
 
 
 
