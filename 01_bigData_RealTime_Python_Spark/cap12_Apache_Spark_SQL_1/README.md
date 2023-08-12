@@ -61,6 +61,10 @@
 ➜ Forma de utilizar a sintaxe SQL em dataframe do Pandas
 <li><b>Carregar dados SQL para Spark</b></li>
 ➜ Transformar em df pandas, depois transformar df pandas em df Spark
+<li><b>Manipulação de dados de DF SPark</b></li>
+➜ Sintaxe parecida com a do pandas / SQL
+➜ Utilizado: Filtros / agg / groupBy
+<li><b>UDF - User Defined Function</b></li>
 
 
 
