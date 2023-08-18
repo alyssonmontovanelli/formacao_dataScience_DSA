@@ -29,15 +29,25 @@
     - Retorna uma lista com as linhas do conjunto de dado
     - Slicing de listas normais 
     <li>Método <b>filter()</b></li>
+    - nativa do spark, opera igual ao where
+    - Tem todas as ferramentas da sintaxe "where" do SQL (inclusive like)
+    <li>Método <b>sort()</b></li>
+    <li>Método <b>orderBy()</b></li>
     <li>Método <b>where()</b></li>
     <li>Método <b>map()</b></li>
-    <li>Método <b>flatmap()</b></li>    
-    <li>Método <b>explode()</b></li>    
-
-
-
-
+    - Aplicar uma função em cada elemento de um RDD
+    - DF não possui o method, tem qeu converter para RDD
+    - Grandes volumes de dados, deve-se usar o mapPartitions() ao invés de map()
+    <li>Método <b>flatmap()</b></li>
+    - Mesma ideia do explode(), porém utilizado apenas para RDD
+    <li>Método <b>explode()</b></li>  
+    - Serve para 'explodir' os dados, bom para tipo de dados misturados, para nivelar
   </ul>
+<li> Agregação com Spark SQL
+  - métodos 'groupby' e 'agg' semelhantes a sitax SQL
+  - No Group By colocamos a coluna que não faz parte da agregação
+  - 'Having' é um filtro para utilizar o resultado da agregação e deve ser escrito após o groupby
+
 </ul>
 
 
