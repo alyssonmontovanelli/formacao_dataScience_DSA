@@ -43,10 +43,20 @@
     <li>Método <b>explode()</b></li>  
     - Serve para 'explodir' os dados, bom para tipo de dados misturados, para nivelar
   </ul>
-<li> Agregação com Spark SQL
+<li> Agregação com Spark SQL </li>
   - métodos 'groupby' e 'agg' semelhantes a sitax SQL
   - No Group By colocamos a coluna que não faz parte da agregação
   - 'Having' é um filtro para utilizar o resultado da agregação e deve ser escrito após o groupby
+<li> Pivot com sintaxe SQL e SparkSQL </li>
+- para o pivot em SQL, precisa fazer uma subquerie, que é uma tablçea temporaria<br><br>
+<li><b>Funções Windown</b></li>
+- Particiona os dados (categoriza)
+- filtros, agrupamentos e rankeamentos por linha, diferente do groupBy que agrupa por coluna
+- Extremamente útil quando a <b>variável "tempo"</b> é relevante 
+<li><b>Parse de Data para Agragação ao longo do tempo</b></li>
+- Aplicação de Policy (isntrução sparkSQL)
+-
+
 
 </ul>
 
