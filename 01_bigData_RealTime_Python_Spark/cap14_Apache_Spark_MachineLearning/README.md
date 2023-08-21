@@ -31,6 +31,21 @@
 - Vetores densos e Vetores espersos
 - É necessário que o vetor esteja em formato de tupla para alimanetar algoritmo de ML com apache Spark, no formato (target , vector([preditora1, preditora2, preditora3]))
 - 'label' no MLlib se refere a variável alvo
+<li><b>Machine Learning</b></li>
+- Nome das variáveis como label e features são obrigatórios
+  <ul>
+    <li><b>Regressão Linear</b></li>
+    - Algorítmo extrai coeficientes para cada var preditora
+    - Intercepto: constante
+    <li><b>Árvores de Decisão</b></li>
+    - Classificador - porém existe tbm esse algorítmo para regressão
+    - Quando quero prever uma variável qeu possui mais de duas saídas
+    - Função StringIndexer cria o indexador, pegando o valor em string e convertendo para tipo numérico
+    -
+
+   
+  </ul>
+
 
 
 
