@@ -28,9 +28,12 @@
 - Correlação / describe do Spark
 - corr do Spark nao retorna a tabela igual pandas, deve-se utilizar um loop 
 <li><b>Pré Processamento dos Dados</b></li>
+- No jupyter de classificação binária tem uma função para label encoding e one-hot enconig
+- Função para transformação dos dados para representação numérica em ANALISE BINÁRIA
 - Vetores densos e Vetores espersos
 - É necessário que o vetor esteja em formato de tupla para alimanetar algoritmo de ML com apache Spark, no formato (target , vector([preditora1, preditora2, preditora3]))
 - 'label' no MLlib se refere a variável alvo
+- Aplicação de PCA para diminuir o tamanho do conjunto de dados (binária). <b>É pegar a informação de todas as variáveis e compactar e poucas, NÃO É EXCLUIR VARIÁVEL - Só funciona para aprendizado não supervisionado</b>
 <li><b>Machine Learning</b></li>
 - Nome das variáveis como label e features são obrigatórios
   <ul>
@@ -42,6 +45,9 @@
     - Quando quero prever uma variável qeu possui mais de duas saídas
     - Função StringIndexer cria o indexador, pegando o valor em string e convertendo para tipo numérico
     -
+    <li><b>Classificação Binária</b></li>
+    - Quando a variável target possui 2 classes
+    - 
 
    
   </ul>
