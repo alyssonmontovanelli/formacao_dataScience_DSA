@@ -53,8 +53,12 @@
     <li><b>KMeans</b></li>
     - Melhor modelo para clusterização
     - Só teremos variáveis de entrada, sme a coluna 'label'
-   
+    - parametro 'K' é o número de grupos que será criados
   </ul>
+  <h2>Mini Projeto 5</h2>
+    <li>Automatização do processamento dos dados</li>
+
+
 
 
 
