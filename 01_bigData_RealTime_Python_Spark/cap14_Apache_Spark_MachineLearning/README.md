@@ -18,6 +18,7 @@
 - Interessante colocar os dados em cache
 - Trabalho no notebook com dados RDD
 - Função lambda para recolher cabeçalho
+- Sempre utilziar multiplas variaveis
 <li><b>Limpeza dos Dados</b></li>
 - RDD não grava Schema dos dados, por isso devemos utilziar lambda para transformar em DF Spark, como feito na primeira celular de Limpeza dos Dados
 - DF Spark ------> DF Pandas
@@ -49,7 +50,9 @@
     - Muito utilizado para classificação de spam
     - Não posso utilizar one hot encoding - utilizaremos outros tratamentos para features (Processamento de linguagem natural)
     - Pipeline - linha de operações com estágios
-
+    <li><b>KMeans</b></li>
+    - Melhor modelo para clusterização
+    - Só teremos variáveis de entrada, sme a coluna 'label'
    
   </ul>
 
