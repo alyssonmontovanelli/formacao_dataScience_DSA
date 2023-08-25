@@ -40,14 +40,15 @@
     <li><b>Regressão Linear</b></li>
     - Algorítmo extrai coeficientes para cada var preditora
     - Intercepto: constante
-    <li><b>Árvores de Decisão</b></li>
+    <li><b>Árvore de Decisão</b></li>
     - Classificador - porém existe tbm esse algorítmo para regressão
     - Quando quero prever uma variável qeu possui mais de duas saídas
     - Função StringIndexer cria o indexador, pegando o valor em string e convertendo para tipo numérico
-    -
-    <li><b>Classificação Binária</b></li>
-    - Quando a variável target possui 2 classes
-    - 
+    <li><b>Árvores de Decisão</b></li>
+    <li><b>Classificação Binária - Naive Bayes</b> - Utilizado para Spam </li>
+    - Muito utilizado para classificação de spam
+    - Não posso utilizar one hot encoding - utilizaremos outros tratamentos para features (Processamento de linguagem natural)
+    - Pipeline - linha de operações com estágios
 
    
   </ul>
