@@ -15,48 +15,53 @@
 <h2>Lab 05</h2>
 <ul>
 <li><b>Gerais</b></li>
-- Interessante colocar os dados em cache
-- Trabalho no notebook com dados RDD
-- Função lambda para recolher cabeçalho
-- Sempre utilziar multiplas variaveis
+➜ Interessante colocar os dados em cache<br>
+➜ Trabalho no notebook com dados RDD<br>
+➜ Função lambda para recolher cabeçalho<br>
+➜ Sempre utilziar multiplas variaveis<br>
 <li><b>Limpeza dos Dados</b></li>
-- RDD não grava Schema dos dados, por isso devemos utilziar lambda para transformar em DF Spark, como feito na primeira celular de Limpeza dos Dados
-- DF Spark ------> DF Pandas
-- Verificação de valores nulos/ausentes/sem significao ("?")
-- Utilização de lambda
-- Aplicação das mudanças diretamente no RDD com função map
-<li><b>Análise Exploratória dos Dados - EDA</b></li>
-- Correlação / describe do Spark
-- corr do Spark nao retorna a tabela igual pandas, deve-se utilizar um loop 
+➜ RDD não grava Schema dos dados, por isso devemos utilziar lambda para transformar em DF Spark, como feito na primeira celular de Limpeza dos Dados<br>
+➜ DF Spark ------> DF Pandas<br>
+➜ Verificação de valores nulos/ausentes/sem significao ("?")<br>
+➜ Utilização de lambda<br>
+➜ Aplicação das mudanças diretamente no RDD com função map<br>
+<li><b>Análise Exploratória dos Dados ➜ EDA</b></li>
+➜ Correlação / describe do Spark<br>
+➜ corr do Spark nao retorna a tabela igual pandas, deve-se utilizar um loop <br>
 <li><b>Pré Processamento dos Dados</b></li>
-- No jupyter de classificação binária tem uma função para label encoding e one-hot enconig
-- Função para transformação dos dados para representação numérica em ANALISE BINÁRIA
-- Vetores densos e Vetores espersos
-- É necessário que o vetor esteja em formato de tupla para alimanetar algoritmo de ML com apache Spark, no formato (target , vector([preditora1, preditora2, preditora3]))
-- 'label' no MLlib se refere a variável alvo
-- Aplicação de PCA para diminuir o tamanho do conjunto de dados (binária). <b>É pegar a informação de todas as variáveis e compactar e poucas, NÃO É EXCLUIR VARIÁVEL - Só funciona para aprendizado não supervisionado</b>
+➜ No jupyter de classificação binária tem uma função para label encoding e one-hot enconig<br>
+➜ Função para transformação dos dados para representação numérica em ANALISE BINÁRIA<br>
+➜ Vetores densos e Vetores espersos<br>
+➜ É necessário que o vetor esteja em formato de tupla para alimanetar algoritmo de ML com apache Spark, no formato (target , vector([preditora1, preditora2, preditora3]))
+➜ 'label' no MLlib se refere a variável alvo<br>
+➜ Aplicação de PCA para diminuir o tamanho do conjunto de dados (binária). <b>É pegar a informação de todas as variáveis e compactar e poucas, NÃO É EXCLUIR VARIÁVEL - Só funciona para aprendizado não supervisionado</b>
 <li><b>Machine Learning</b></li>
-- Nome das variáveis como label e features são obrigatórios
+➜ Nome das variáveis como label e features são obrigatórios
   <ul>
     <li><b>Regressão Linear</b></li>
-    - Algorítmo extrai coeficientes para cada var preditora
-    - Intercepto: constante
+    ➜ Algorítmo extrai coeficientes para cada var preditora<br>
+    ➜ Intercepto: constante
     <li><b>Árvore de Decisão</b></li>
-    - Classificador - porém existe tbm esse algorítmo para regressão
-    - Quando quero prever uma variável qeu possui mais de duas saídas
-    - Função StringIndexer cria o indexador, pegando o valor em string e convertendo para tipo numérico
+    ➜ Classificador - porém existe tbm esse algorítmo para regressão<br>
+    ➜ Quando quero prever uma variável qeu possui mais de duas saídas<br>
+    ➜ Função StringIndexer cria o indexador, pegando o valor em string e convertendo para tipo numérico
     <li><b>Árvores de Decisão</b></li>
     <li><b>Classificação Binária - Naive Bayes</b> - Utilizado para Spam </li>
-    - Muito utilizado para classificação de spam
-    - Não posso utilizar one hot encoding - utilizaremos outros tratamentos para features (Processamento de linguagem natural)
-    - Pipeline - linha de operações com estágios
+    ➜ Muito utilizado para classificação de spam<br>
+    ➜ Não posso utilizar one hot encoding - utilizaremos outros tratamentos para features (Processamento de linguagem natural)<br>
+    ➜ Pipeline - linha de operações com estágios
     <li><b>KMeans</b></li>
-    - Melhor modelo para clusterização
-    - Só teremos variáveis de entrada, sme a coluna 'label'
-    - parametro 'K' é o número de grupos que será criados
+    ➜ Melhor modelo para clusterização<br>
+    ➜ Só teremos variáveis de entrada, sme a coluna 'label'<br>
+    ➜ parametro 'K' é o número de grupos que será criados<br>
   </ul>
   <h2>Mini Projeto 5</h2>
     <li>Automatização do processamento dos dados</li>
+    ➜ Verificação de valores nulos, outliers, tratamento de variaveis categoricas e padronização/normalização das numericas<br>
+    ➜ Utilização do parametro pearson para corr()
+    <li><b>AUTO ML</b> - Automated Machine Learning</li>
+    ➜ Quando executar a validação cruzada, quantidade de moldes criado será igual a qtde params informados<br>
+    ➜ Devo sempre aplicar todos os tratamentos aos novos dados , nesse caso, a variavel age teve outlier  <br>
 
 
 
