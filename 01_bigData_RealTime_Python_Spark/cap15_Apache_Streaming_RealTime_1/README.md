@@ -38,10 +38,12 @@
 - <b>Leitura do Streaming de dados e Análise com PySpark</b>
 - Todo esse mini projeto será feito em 3 etapas
 
-<h3>Etapa 1</h3>
+<h3>Etapa 1 - <b>Arquivo para simulação</b></h3>
 - Geração de dados aleatórios em arquivo .py, para preencher dados de IoT
 - Utilização de 'sys', condicionais, regex, loop
 
+<h3>Etapa 2 - <b>Apache Kafka</b></h3>
+- Dowload apache Kafka
 
 
  
