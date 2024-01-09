@@ -7,6 +7,12 @@
 <h2>Tipos de variáveis</h2>
 
 - Vetor é representado por "c"
-- Chamando função com function(x) {x+3
-}
+- Chamando função com function(x) {x+3}
+- Formas de atribuir valor a variaveis: "->", "<-", "=", "assign" (linha 51 - 03_)
+
+
+<h2>Tipos de Dados</h2>
+
+- Por padrão, variáveis com números são do tipo double
+
 

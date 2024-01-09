@@ -18,11 +18,12 @@ y = as.integer(num2)
 class(y)
 mode(y)
 typeof(y)
+y
 
-as.integer('3.14')
-as.integer('Joe')
-as.integer(TRUE)
-as.integer(FALSE)
+as.integer('3.14') # 3
+as.integer('Joe') # NA
+as.integer(TRUE) # 1
+as.integer(FALSE) # 0
 
 
 
@@ -60,3 +61,6 @@ class(u)
 u & v
 u | v
 !u
+
+5/0
+0/5
