@@ -28,7 +28,7 @@ View(iris)
 length(iris)
 mode(iris)
 typeof(iris)
-
+class(iris)
 
 # LISTAS: Coleção de diferentes objetos
 lista1 = list(a = vetor1, b= matriz1)

@@ -14,5 +14,14 @@
 <h2>Tipos de Dados</h2>
 
 - Por padrão, variáveis com números são do tipo double
+- Tipos lógicos são os comparativos
 
+
+<h3>Tipos de Dados</h3>
+
+- Vetores -> 1 dimensão e 1 tipo de dado
+- matrizes -> 2 dimensões e 1 tipo de dado
+- Array -> 2 ou mais dimensões e 1 tipo de dado
+- Lista -> tem mais de um tipo de dado, usa a chamada "list"
+- DataFrame --> dados de diferentes tipos e estruturados em tabela
 
