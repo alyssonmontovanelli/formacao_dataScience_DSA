@@ -25,3 +25,7 @@
 - Lista -> tem mais de um tipo de dado, usa a chamada "list"
 - DataFrame --> dados de diferentes tipos e estruturados em tabela
 
+<h3>Matrizes</h3>
+
+- nr - número de linhas / nc - número de colunas
+- dinames para nomear as linhas e colunas da matiz

@@ -20,6 +20,10 @@ vetor_logico
 #vetor de numeros inteiros
 vetor_integer = c(2,10,29)
 vetor_integer
+mode(vetor_integer)
+typeof(vetor_integer)
+vetor_integer = as.integer(vetor_integer)
+typeof(vetor_integer)
 
 
 # Utilizando a função seq()
@@ -69,3 +73,9 @@ v
 names(v) = c('Nome', 'Sobrenome')
 v
 v['Nome']
+
+nomeTeste = c("Alysson", "Melo")
+nomeTeste
+names(nomeTeste) = c('Nome', 'Sobrenome')
+nomeTeste
+nomeTeste['Nome']
