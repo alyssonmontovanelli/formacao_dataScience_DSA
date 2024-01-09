@@ -6,9 +6,10 @@ print(var1)
 mode(var1)
 help('mode')
 sqrt(var1)
+typeof(var1)
 
 # Atribuir valor de variavel em outra variavel
-var2 = var1
+var2 = 55
 var2
 typeof(var2)
 mode(var2)
@@ -28,12 +29,16 @@ var4(10)
 
 # Mudar o modo do dado
 var1
+mode(var1)
 var5 = as.character(var1)
 mode(var5)
 
 # Atribuindo valores a objetos
 x <- c(1,2,3)
 x 
+typeof(x)
+mode(x)
+
 c(1,2,3) -> y
 y
 x1 = c(1,2,3)
@@ -45,7 +50,8 @@ typeof(x1)
 
 assign("x", c(6.3, 8.9, -6))
 x[1]
+x
 
 # Verifica objetos
-ls()
+ls() # lista objetos
 objects()

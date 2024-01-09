@@ -9,7 +9,7 @@ sessionInfo() # Resumo sobre a sessão
 print('Estou iniciando os estudos com a linguagem R')
 
 # Criando gráfico
-plot(1:25)
+plot(1:25:15)
 
 # Instalando pacotes
 install.packages('randomForest')
@@ -20,7 +20,7 @@ install.packages('devtools')
 # Carregando pacote da memória
 library(ggplot2)
 
-# Descarregar o pacote 
+# Descarregar o pacote - tirar da memória do computador
 detach(package:ggplot2)
 
 # Se souber o nome da função 
