@@ -67,3 +67,35 @@ o.set <- factor(set1,
                 levels = c("AA", "BA", "B", "CA", "CB", "CC"),
                 ordered = TRUE)
 o.set
+
+
+## ---------------------- CARREGANDO ARQUIVO CSV ------------------ ##
+
+df <- fread("C:/formacao_dataScience_DSA/02_bigData_R_Azure_machineLearning/Cap03_Fatores_EstruturaControle_Funcoes/03_etnias.csv")
+df
+View(df)
+
+# Verificando tipos das variaveis do DF
+str(df)
+
+# Variável original (antes da transformação)
+levels(df$Etnia)
+summary(df$Etnia)
+
+# Verificando quantidade das ocorrências com Factor
+df$Etnia <- as.factor(df$Etnia)
+levels(df$Etnia)
+summary(df$Etnia)
+
+# PLOTAGEM
+boxplot(df$Idade ~ df$Etnia, xlab = 'Etnia', ylab = "Idade", main = "Idade por Etnia")
+
+
+# REGRESSÃO 
+summary(lm(Idade ~Etnia, data = df))
+
+
+# Verificando novamente o STR
+str(df)
+df$Estado_Civil.cat <- factor(df$Estado_Civil, labels = c("Solteiro", "Casado", "Divorciado"))
+df

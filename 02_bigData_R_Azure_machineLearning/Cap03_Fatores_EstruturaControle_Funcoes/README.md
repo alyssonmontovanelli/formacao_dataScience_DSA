@@ -13,8 +13,10 @@
   ➜ Variáveis categóricas para armazenar valores de caracteres
   ➜ Otimiza performance, registrando apenas o valor unitario dos valores que se repetem
   ➜ "levels()" são os niveis do fator, ou seja, os termos unicos
-  <li>Instruções DDL</li>
-  ➜ Create Table / Alter Table / Drop Table
+  ➜ ÓTIMO para contabilizar os fatores de uma variável
+  ➜ factor() 
+  <li>Condicionais</li>
+  ➜ ifelse para verificar de forma rapida
   <li>Instruções DCL</li>
   ➜ Grant - Autoriza o usuário do SGBD
   ➜ Revoke - Remove autorização do usuário 
