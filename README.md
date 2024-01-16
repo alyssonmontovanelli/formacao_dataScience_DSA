@@ -29,3 +29,13 @@
 
 - nr - número de linhas / nc - número de colunas
 - dinames para nomear as linhas e colunas da matiz
+
+
+<h3>Exercício</h3>
+
+- Pacote dplyr com slice para cortar o DF
+- subset para criar novo DF com alguma regra
+- 
+
+
+
