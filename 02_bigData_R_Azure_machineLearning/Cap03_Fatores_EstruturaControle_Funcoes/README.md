@@ -17,11 +17,12 @@
   ➜ factor() 
   <li>Condicionais</li>
   ➜ ifelse para verificar de forma rapida
-  <li>Instruções DCL</li>
-  ➜ Grant - Autoriza o usuário do SGBD
-  ➜ Revoke - Remove autorização do usuário 
-  <li>Instruções DQL</li>
-  ➜ Select  - ex: select id, nome from tb_cliente where id= 100 and nome = 'Bob' 
+  ➜ Função rep() é incrivel
+  <li>Funções</li>
+  ➜ function(...) para criar funções sem parametros
+  <li>Família APPLY()L</li>
+  ➜ SCRIPT 07 está bem explicativo
+  ➜ Função "gl" cria os niveis de fatores 
   <li>Instruções DTL</li>
   ➜ Commit / Begin Transaction / Rollback 
 </ul>
