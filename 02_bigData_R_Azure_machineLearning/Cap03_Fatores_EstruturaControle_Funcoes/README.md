@@ -24,6 +24,10 @@
   ➜ SCRIPT 07 está bem explicativo
   ➜ Função "gl" cria os niveis de fatores
   <li>REGEX - Expressões Regulares</li>
+  ➜ Bizurometro baixado na pasta de dados do curso
+  <li>DATAS</li>
+  ➜
+
 </ul>
 
 
