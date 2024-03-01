@@ -25,6 +25,7 @@
   ➜ Função "gl" cria os niveis de fatores
   <li>REGEX - Expressões Regulares</li>
   ➜ Bizurometro baixado na pasta de dados do curso
+  constar
   <li>DATAS</li>
   ➜
 
