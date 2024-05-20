@@ -43,3 +43,42 @@ dataset_bank %>%
   ggplot(aes(x = technology_use, y = n))+
   geom_bar(stat = "identity")+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+######################################################
+# Encoder para a coluna default - coluna com 2 possibilidades
+dataset_bank <- dataset_bank %>%
+  mutate(defaulted = ifelse(default == 'yes', 1, 0))
+
+View(dataset_bank)
+
+
+######################################################
+# One Hot ENCONDING utilizando pacote CARET
+
+library(caret)
+dmy <- dummyVars(" ~ .", data = dataset_bank)
+bank.dummies <- data.frame(predict(dmy, newdata = dataset_bank))
+
+View(bank.dummies)
+
+
+########################################################
+# SUMARIZAR - juntar informações de variaveis em outra 
+
+dataset_bank %>%
+  group_by(job, marital)%>%
+  summarise(n = n())
+
+
+dataset_bank %>%
+  group_by(job, marital) %>%
+  summarise(n=n()) %>%
+  ggplot(aes(x = job, y = n, fill = marital))+
+  geom_bar(stat = 'identity', position = 'dodge')+
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+
+# Utilizando dummyVars nesse conjunto sumarizado
+dmy <- dummyVars( ~ job:marital, data = dataset_bank)
+bank.cross <- predict(dmy, newdata = dataset_bank)
+View(bank.cross)
