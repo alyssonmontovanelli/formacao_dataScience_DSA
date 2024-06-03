@@ -97,3 +97,92 @@ View(previsoes)
 
 # Confusion Matrix - Verificar desempenho do modelo
 confusionMatrix(table(data = previsoes, reference = test.class.var), positive = '1')
+
+
+##### FEATURE SELECTION - VERIFICANDO IMPORTÂNCIA DAS VARIÁVEIS
+formula <- "credit.rating ~ ."
+formula <- as.formula(formula)
+control <- trainControl(method = "repeatedcv", number = 10, repeats = 2) # caret - repete o processo varias vezes
+model <-train(formula, data = train.data, method = 'glm', trControl = control)
+importance <- varImp(model, scale = FALSE)
+
+## PLOT 
+plot(importance)
+
+
+##### ---------------------------------------------------------------
+# CONSTRUINDO NOVO MODELO COM AS VARIÁVEIS SELECIONADAS
+# UTILIZAREI AS MAIS IMPORTANTES DA VIDA 
+formula.new <- "credit.rating ~ account.balance + credit.purpose + previous.credit.payment.status + savings + credit.duration.months"
+formula.new <- as.formula(formula.new)
+modelo_v2 <- glm(formula = formula.new, data = train.data, family = 'binomial')
+
+
+# Prevendo e avaliando o modelo
+previous_new <- predict(modelo_v2, test.data, type = 'response')
+previous_new <- round(previous_new)
+
+# Confusion Matrix
+confusionMatrix(table(data = previous_new, reference = test.class.var), positive = '1')
+
+#### ---------------------------------------------------
+# Avaliando a performance do modelo
+modelo_final <- modelo_v2
+previsoes <- predict(modelo_final, test.feature.vars, type = 'response')
+avaliacao <- prediction(previsoes, test.class.var)
+
+# Função para Plot ROC
+plot.roc.curve <- function(predictions, title.tex){
+  perf <- performance(avaliacao, "tpr","fpr")
+  plot(perf, col = 'black', lty = 1, lwd = 2,
+       main = title.text, cex.main = 0.6, cex.lab = 0.8, xaxs = 'i', yaxs = 'i')
+  abline(0,1, col = 'red')
+  auc <- performance(avaliacao, 'auc')
+  auc <- unlist(slot(auc, 'y.values'))
+  auc <- round(auc,2)
+  legend(0.4,0.4,legend = c(paste0("AUC: ",auc )), cex = 0.6, bty = 'n', box.col = 'white')
+  
+}
+
+# PLot
+par(mfrow = c(1,2))
+plot.roc.curve(avaliacao, title.text = "Curva ROC")
+
+##### ---------------------------------------------------------
+# Fazendo previsões em novos dados
+
+# Novos dados
+account.balance <- c(1,3,3,2)
+credit.purpose <- c(4,2,3,2)
+previous.credit.payment.status <- c(3,3,2,2)
+savings <- c(2,3,2,3)
+credit.duration.months <- c(15,12,8,6)
+
+# Criando novo dataframe 
+novo_datatset<- data.frame(account.balance,
+                           credit.purpose,
+                           previous.credit.payment.status,
+                           savings,
+                           credit.duration.months)
+class(novo_datatset)
+View(novo_datatset)
+
+
+# Separa variáveis exploratórias numericas e categoricas
+new.numeric.vars <- c("credit.duration.months")
+new.categorical.vars <- c("account.balance", "credit.purpose", "previous.credit.payment.status", "savings")
+
+# Aplicando as transformações
+novo_dataset_final <- to.factors(df = novo_datatset, variables = new.categorical.vars)
+str(novo_dataset_final)
+
+novo_dataset_final <- scale.features(novo_dataset_final, new.numeric.vars)
+str(novo_dataset_final)
+
+View(novo_dataset_final)
+
+
+
+# PREVISÕES
+previsoes_novo_cliente <- predict(modelo_final, newdata = novo_dataset_final, type = "response")
+round(previsoes_novo_cliente)
