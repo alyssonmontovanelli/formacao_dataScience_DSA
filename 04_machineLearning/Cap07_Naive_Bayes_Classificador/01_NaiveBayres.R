@@ -60,7 +60,7 @@ replacePunctuation <- function(x){gsub("[[:punct:]]+", " ", x)} # Troca pontuaç
 replacePunctuation("hello...word")
 
 # Word Stemming - tirando o verbo das palavras
-wordStem(c("learn", learned, learning, learns))
+wordStem(c("learn", "learned", "learning", "learns"))
 
 # Aplicando STEM - automatizar a generalização das palavras
 dados_corpus_clean <- tm_map(dados_corpus_clean, stemDocument)
@@ -71,6 +71,7 @@ dados_corpus_clean <- tm_map(dados_corpus_clean, stripWhitespace)
 # EXAMINANDO A VERSAO FINAL DO CORPUS
 lapply(dados_corpus[1:3], as.character)
 lapply(dados_corpus_clean[1:3], as.character)
+
 # APRESENTOU GRANDE DIFENÇA. 
 
 
