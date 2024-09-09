@@ -55,7 +55,7 @@ credit_model
 
 
 # Informações detalhadas sobre a árvore 
-summary(credit_model)
+summary(credit_model) # Mostrando as variáveis mais relevantes
 
 # Avaliando a performance do modelo
 credit_predict <- predict(credit_model, credit_test)
@@ -81,4 +81,46 @@ CrossTable(credit_test$default,
 # Aumentando a precisão com 10 tentativas
 credit_boost10 <- C5.0(credit_train[-17], credit_train$default, trials = 10) #treina 10x
 credit_boost10
-summary(credit_boost10)
+summary(credit_boost10) # para verificar a pct de erros nas passagens e matrix de confusao
+
+# Esse novo modelo criu menos nós, ou seja, o modelo por ter girado 10x, aprendeu mais com menos nós
+
+# Score do modelo
+credit_boost_pred10 <- predict(credit_boost10, credit_test)
+
+# Confusion matrix
+CrossTable(credit_test$default,
+           credit_boost_pred10,
+           prop.chisq = FALSE,
+           prop.c = FALSE,
+           prop.r = FALSE,
+           dnn = c("Observado", "Previsto"))
+
+
+############################################################
+# Outra forma de tentar otimizar a árvore de decisão
+# Utilizando pesos aos erros
+
+# Criando uma matriz de dimensões de custo
+matrix_dimensions <- list(c("no", "yes"), c("no", "yes"))
+names(matrix_dimensions) <- c("Previsto", "Observado")
+matrix_dimensions
+
+# Construindo a matriz
+error_cost <- matrix(c(0,1,4,0), nrow = 2, dimnames = matrix_dimensions)
+error_cost
+
+# Aplicando a matrix a árvore
+credit_cost <- C5.0(credit_train[-17], credit_train$default, costs = error_cost)
+
+#Score do Modelo
+credit_cost_pred <- predict(credit_cost, credit_test)
+credit_cost
+
+# Confusion MMatrix
+CrossTable(credit_test$default,
+           credit_cost_pred,
+           prop.chisq = FALSE,
+           prop.c = FALSE,
+           prop.r = FALSE,
+           dnn = c("Observado", "Previsto"))
