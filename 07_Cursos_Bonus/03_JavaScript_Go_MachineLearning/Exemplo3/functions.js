@@ -51,7 +51,8 @@ function potencia(base, exponent) {
     
     var result = 1;
     
-    for (var count = 0; count < exponent; count++)
+    var count = 0
+    for (count ; count < exponent; count++)
         result *= base;
     
     return result;

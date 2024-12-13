@@ -4,15 +4,13 @@
 Estruturas de Dados - Arrays
 
 */
-
-
 var linguagens = ['JavaScript', 'Python', 'Scala'];
 
 console.log("Trabalhando com Arrays:");
 console.log(linguagens);
 console.log(typeof(linguagens));
-console.log(linguagens.length)
-console.log(linguagens.indexOf('Python'));
+console.log(linguagens.length); //tamanho do array
+console.log(linguagens.indexOf('Python')); //Indice do elemento
 console.log(linguagens[0]);
 
 linguagens[2] = 'Java';

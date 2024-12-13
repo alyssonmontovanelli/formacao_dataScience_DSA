@@ -93,7 +93,7 @@ Estruturas Condicionais
 
 console.log("Estruturas Condicionais:") 
 
-
+// let notaAluno1, notaAluno2
 var notaAluno1, notaAluno2
 
 notaAluno1 = 6
